@@ -21,17 +21,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # Utilise Temurin, un JDK open-source
-          java-version: '21'      # Spécifie la version de Java
-
-      # Cache Maven pour accélérer les builds
-      - name: Cache Maven dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+          java-version: '21'
 
       # Construire le projet
       - name: Build with Maven
@@ -40,11 +30,3 @@ jobs:
       # Exécuter les tests
       - name: Run Tests
         run: mvn test
-
-      # Afficher les résultats des tests
-      - name: Upload test results
-        if: always() # Exécute cette étape même si les tests échouent
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: target/surefire-reports/ # Emplacement des rapports de test générés par Maven
