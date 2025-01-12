@@ -27,15 +27,15 @@ Ce projet est une application Java simple qui simule un système de compte banca
    git clone https://github.com/votre-utilisateur/bank-kata.git
    cd bank-kata
    ```
-2. **Construire le projet :
+2. **Construire le projet :**
     ```bash
    mvn clean install
    ```
-3. **Lancer les tests :
+3. **Lancer les tests :**
      ```bash
    mvn test
    ```
-     ** Cas testés : **
+     **Cas testés :**
 - Montants valides et invalides pour les dépôts.
 - Retraits dans et hors des limites autorisées.
 - Respect de la limite journalière de retrait.
