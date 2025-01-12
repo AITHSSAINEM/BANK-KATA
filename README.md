@@ -35,9 +35,4 @@ Ce projet est une application Java simple qui simule un système de compte banca
      ```bash
    mvn test
    ```
-     **Cas testés :**
-- Montants valides et invalides pour les dépôts.
-- Retraits dans et hors des limites autorisées.
-- Respect de la limite journalière de retrait.
-- Affichage du relevé des transactions dans le bon ordre.
-    
+
