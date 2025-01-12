@@ -21,7 +21,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '21'
+          distribution: 'temurin'  # Distribution Java (open-source)
+          java-version: '21'       # Version de Java à utiliser
 
       # Construire le projet
       - name: Build with Maven
