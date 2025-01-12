@@ -10,7 +10,12 @@ public class Main {
             account.deposit(1000); // Dépôt de 1000
             account.deposit(2000); // Dépôt de 2000
             account.withdraw(500); // Retrait de 500
+            account.withdraw(500); // Retrait de 500
             account.printStatement(); // Affichage du relevé
+            account.withdraw(500); // Retrait de 500
+            account.withdraw(500); // Retrait de 500
+            System.out.println(account.getBalance());
+
 
         } catch (IllegalArgumentException | IllegalStateException e) {
             System.err.println("Erreur: " + e.getMessage());
