@@ -32,13 +32,14 @@ public class Account implements AccountService {
 
     @Override
     public void printStatement() {
-        System.out.println("DATE       | MONTANT | SOLDE");
-        int runningBalance = balance;
+        System.out.println("DATE       | MONTANT  | SOLDE");
+        System.out.println("------------------------------");
+
         List<Transaction> reversedTransactions = new ArrayList<>(transactions);
         Collections.reverse(reversedTransactions);
         for (Transaction transaction : reversedTransactions) {
-            System.out.printf("%s | %d     | %d%n", transaction.getDate(), transaction.getAmount(), runningBalance);
-            runningBalance -= transaction.getAmount();
+            System.out.printf("%s | %d     | %d%n", transaction.getDate(), transaction.getAmount(), this.balance);
+            this.balance -= transaction.getAmount();
         }
     }
 
