@@ -24,7 +24,7 @@ Ce projet est une application Java simple qui simule un système de compte banca
 
 1. **Cloner le dépôt :**
    ```bash
-   git clone https://github.com/votre-utilisateur/bank-kata.git
+   git clone https://github.com/AITHSSAINEM/BANK-KATA.git
    cd bank-kata
    ```
 2. **Construire le projet :**
